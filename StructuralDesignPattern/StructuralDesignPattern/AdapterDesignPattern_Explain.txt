@@ -1,0 +1,157 @@
+﻿Adapter Design Pattern
+The Adapter pattern is used to make two incompatible interfaces work together. It converts the interface of a class into another interface that a client expects, acting as a bridge between two different systems.
+
+Scenario:
+Let’s say we have a media player that can only play MP3 files. But we want to adapt it to play other formats like MP4 and VLC using an adapter.
+
+
+Step 1: Define the Client Interface
+The client expects an IMediaPlayer interface to play audio files.
+
+
+// Client interface
+public interface IMediaPlayer
+{
+    void Play(string audioType, string fileName);
+}
+
+
+Step 2: Create the Adaptee Classes (Incompatible Interfaces)
+These classes represent the systems with interfaces that are incompatible with the IMediaPlayer.
+
+
+
+// Adaptee 1: MP4 Player
+public class Mp4Player
+{
+    public void PlayMp4(string fileName)
+    {
+        Console.WriteLine("Playing MP4 file: " + fileName);
+    }
+}
+
+
+// Adaptee 2: VLC Player
+public class VlcPlayer
+{
+    public void PlayVlc(string fileName)
+    {
+        Console.WriteLine("Playing VLC file: " + fileName);
+    }
+}
+
+
+Step 3: Create the Adapter
+The adapter implements the IMediaPlayer interface and internally uses the incompatible Mp4Player and VlcPlayer classes to make them compatible with the client's expected interface.
+
+
+
+
+// Adapter
+public class MediaAdapter : IMediaPlayer
+{
+    private Mp4Player _mp4Player;
+    private VlcPlayer _vlcPlayer;
+
+    public MediaAdapter(string audioType)
+    {
+        if (audioType.Equals("mp4", StringComparison.OrdinalIgnoreCase))
+        {
+            _mp4Player = new Mp4Player();
+        }
+        else if (audioType.Equals("vlc", StringComparison.OrdinalIgnoreCase))
+        {
+            _vlcPlayer = new VlcPlayer();
+        }
+    }
+
+    public void Play(string audioType, string fileName)
+    {
+        if (audioType.Equals("mp4", StringComparison.OrdinalIgnoreCase))
+        {
+            _mp4Player.PlayMp4(fileName);
+        }
+        else if (audioType.Equals("vlc", StringComparison.OrdinalIgnoreCase))
+        {
+            _vlcPlayer.PlayVlc(fileName);
+        }
+    }
+}
+
+
+Step 4: Implement the Concrete Client
+Now, we create a media player that can use the adapter to play different formats.
+
+
+// Concrete Client
+public class AudioPlayer : IMediaPlayer
+{
+    private MediaAdapter _mediaAdapter;
+
+    public void Play(string audioType, string fileName)
+    {
+        if (audioType.Equals("mp3", StringComparison.OrdinalIgnoreCase))
+        {
+            Console.WriteLine("Playing MP3 file: " + fileName);
+        }
+        else if (audioType.Equals("mp4", StringComparison.OrdinalIgnoreCase) || audioType.Equals("vlc", StringComparison.OrdinalIgnoreCase))
+        {
+            _mediaAdapter = new MediaAdapter(audioType);
+            _mediaAdapter.Play(audioType, fileName);
+        }
+        else
+        {
+            Console.WriteLine("Invalid media type: " + audioType + " format not supported.");
+        }
+    }
+}
+
+
+Step 5: Client Code
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        AudioPlayer audioPlayer = new AudioPlayer();
+
+        audioPlayer.Play("mp3", "song.mp3");        // Output: Playing MP3 file: song.mp3
+        audioPlayer.Play("mp4", "video.mp4");       // Output: Playing MP4 file: video.mp4
+        audioPlayer.Play("vlc", "movie.vlc");       // Output: Playing VLC file: movie.vlc
+        audioPlayer.Play("avi", "movie.avi");       // Output: Invalid media type: avi format not supported.
+    }
+}
+
+
+Output:
+
+Playing MP3 file: song.mp3
+Playing MP4 file: video.mp4
+Playing VLC file: movie.vlc
+Invalid media type: avi format not supported.
+Key Points:
+The Adapter pattern is used when you want to use an existing class with a different interface than what the client expects.
+It involves adapting the interface of an existing class (the Adaptee) to match the expected interface (the Client Interface).
+In this example, the AudioPlayer class works with the IMediaPlayer interface, but uses the MediaAdapter to adapt the behavior of the Mp4Player and VlcPlayer.
+
+
+
+
+
+Summary: Adapter Design Pattern
+The Adapter pattern is a structural design pattern that allows incompatible interfaces to work together. It acts as a bridge between two interfaces, enabling collaboration without changing their source code.
+
+Key Points:
+Intent: Convert the interface of a class into another interface the client expects.
+Use Case: When you have existing classes with incompatible interfaces and need to integrate them without modifying their implementation.
+Participants:
+Client: The class expecting an interface to interact with.
+Adaptee: The class with the incompatible interface.
+Adapter: A class that implements the client interface and internally adapts the calls to the adaptee's methods.
+Example: In a media player application, the client expects a unified interface to play different media formats (MP3, MP4, VLC). The adapter bridges the gap by making different media players (e.g., Mp4Player, VlcPlayer) work with the client’s expected interface (IMediaPlayer).
+The Adapter pattern promotes code reusability and flexibility by enabling existing, incompatible classes to work together without requiring changes to their internal implementation.
+
+
+
+
+
+

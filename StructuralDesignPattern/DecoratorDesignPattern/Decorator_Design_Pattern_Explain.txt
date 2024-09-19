@@ -1,0 +1,135 @@
+﻿Decorator Design Pattern
+The Decorator pattern is a structural design pattern that allows behavior to be added to individual objects, either statically or dynamically, without affecting the behavior of other objects from the same class. It provides a flexible alternative to subclassing for extending functionality.
+
+Scenario:
+Suppose we have a simple coffee, and we want to dynamically add various ingredients (like milk, sugar, etc.) without modifying the base class or creating an extensive subclass hierarchy.
+
+
+
+Step 1: Define the Component Interface
+The component defines the common interface for both the base object and the decorators.
+
+// Component interface
+public interface ICoffee
+{
+    string GetDescription();
+    double GetCost();
+}
+
+
+Step 2: Create Concrete Components
+The concrete component implements the base functionality (e.g., plain coffee).
+
+
+// Concrete Component
+public class SimpleCoffee : ICoffee
+{
+    public string GetDescription()
+    {
+        return "Simple Coffee";
+    }
+
+    public double GetCost()
+    {
+        return 5.0; // Base cost of coffee
+    }
+}
+
+
+
+Step 3: Create the Decorator Base Class
+The decorator implements the same interface as the component and holds a reference to the component being decorated.
+
+
+// Base Decorator
+public abstract class CoffeeDecorator : ICoffee
+{
+    protected ICoffee _coffee;
+
+    public CoffeeDecorator(ICoffee coffee)
+    {
+        _coffee = coffee;
+    }
+
+    public virtual string GetDescription()
+    {
+        return _coffee.GetDescription();
+    }
+
+    public virtual double GetCost()
+    {
+        return _coffee.GetCost();
+    }
+}
+
+
+Step 4: Create Concrete Decorators
+Concrete decorators extend the functionality of the base component by adding new behavior.
+
+
+// Concrete Decorator - Milk
+public class MilkDecorator : CoffeeDecorator
+{
+    public MilkDecorator(ICoffee coffee) : base(coffee) { }
+
+    public override string GetDescription()
+    {
+        return _coffee.GetDescription() + ", Milk";
+    }
+
+    public override double GetCost()
+    {
+        return _coffee.GetCost() + 1.5; // Adding milk cost
+    }
+}
+
+// Concrete Decorator - Sugar
+public class SugarDecorator : CoffeeDecorator
+{
+    public SugarDecorator(ICoffee coffee) : base(coffee) { }
+
+    public override string GetDescription()
+    {
+        return _coffee.GetDescription() + ", Sugar";
+    }
+
+    public override double GetCost()
+    {
+        return _coffee.GetCost() + 0.5; // Adding sugar cost
+    }
+}
+
+
+Step 5: Client Code
+The client can now dynamically add behavior (decorators) to the objects without altering their underlying class.
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        // Simple coffee
+        ICoffee coffee = new SimpleCoffee();
+        Console.WriteLine(coffee.GetDescription() + " $" + coffee.GetCost());
+
+        // Coffee with milk
+        coffee = new MilkDecorator(coffee);
+        Console.WriteLine(coffee.GetDescription() + " $" + coffee.GetCost());
+
+        // Coffee with milk and sugar
+        coffee = new SugarDecorator(coffee);
+        Console.WriteLine(coffee.GetDescription() + " $" + coffee.GetCost());
+    }
+}
+
+Output:
+
+Simple Coffee $5
+Simple Coffee, Milk $6.5
+Simple Coffee, Milk, Sugar $7
+Key Points:
+The Decorator pattern allows you to dynamically add behavior or responsibilities to an object.
+Decorators implement the same interface as the objects they decorate, making them interchangeable.
+You can chain multiple decorators to add multiple functionalities.
+Example: In a coffee shop system, you start with a plain coffee and dynamically add milk, sugar, etc., at runtime without altering the base SimpleCoffee class.
+Summary:
+The Decorator pattern offers flexibility by allowing functionality to be added to individual objects dynamically. It provides an alternative to subclassing, enabling behavior to be extended without modifying existing classes. This results in a flexible and reusable system for adding features to objects.

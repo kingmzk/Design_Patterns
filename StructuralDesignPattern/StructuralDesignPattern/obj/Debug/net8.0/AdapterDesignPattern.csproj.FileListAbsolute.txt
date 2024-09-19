@@ -1,0 +1,15 @@
+E:\C# VIsual Studio\DesignPatterns\StructuralDesignPattern\StructuralDesignPattern\bin\Debug\net8.0\AdapterDesignPattern.exe
+E:\C# VIsual Studio\DesignPatterns\StructuralDesignPattern\StructuralDesignPattern\bin\Debug\net8.0\AdapterDesignPattern.deps.json
+E:\C# VIsual Studio\DesignPatterns\StructuralDesignPattern\StructuralDesignPattern\bin\Debug\net8.0\AdapterDesignPattern.runtimeconfig.json
+E:\C# VIsual Studio\DesignPatterns\StructuralDesignPattern\StructuralDesignPattern\bin\Debug\net8.0\AdapterDesignPattern.dll
+E:\C# VIsual Studio\DesignPatterns\StructuralDesignPattern\StructuralDesignPattern\bin\Debug\net8.0\AdapterDesignPattern.pdb
+E:\C# VIsual Studio\DesignPatterns\StructuralDesignPattern\StructuralDesignPattern\obj\Debug\net8.0\AdapterDesignPattern.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# VIsual Studio\DesignPatterns\StructuralDesignPattern\StructuralDesignPattern\obj\Debug\net8.0\AdapterDesignPattern.AssemblyInfoInputs.cache
+E:\C# VIsual Studio\DesignPatterns\StructuralDesignPattern\StructuralDesignPattern\obj\Debug\net8.0\AdapterDesignPattern.AssemblyInfo.cs
+E:\C# VIsual Studio\DesignPatterns\StructuralDesignPattern\StructuralDesignPattern\obj\Debug\net8.0\AdapterDesignPattern.csproj.CoreCompileInputs.cache
+E:\C# VIsual Studio\DesignPatterns\StructuralDesignPattern\StructuralDesignPattern\obj\Debug\net8.0\AdapterDesignPattern.sourcelink.json
+E:\C# VIsual Studio\DesignPatterns\StructuralDesignPattern\StructuralDesignPattern\obj\Debug\net8.0\AdapterDesignPattern.dll
+E:\C# VIsual Studio\DesignPatterns\StructuralDesignPattern\StructuralDesignPattern\obj\Debug\net8.0\refint\AdapterDesignPattern.dll
+E:\C# VIsual Studio\DesignPatterns\StructuralDesignPattern\StructuralDesignPattern\obj\Debug\net8.0\AdapterDesignPattern.pdb
+E:\C# VIsual Studio\DesignPatterns\StructuralDesignPattern\StructuralDesignPattern\obj\Debug\net8.0\AdapterDesignPattern.genruntimeconfig.cache
+E:\C# VIsual Studio\DesignPatterns\StructuralDesignPattern\StructuralDesignPattern\obj\Debug\net8.0\ref\AdapterDesignPattern.dll
