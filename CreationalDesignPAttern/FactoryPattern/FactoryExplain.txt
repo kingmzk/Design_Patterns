@@ -1,0 +1,128 @@
+﻿1. Factory Pattern Overview:
+The Factory Pattern is a creational design pattern that provides an interface or method to create objects without exposing the creation logic. Instead of creating objects directly using the new keyword, the Factory delegates that responsibility to a method.
+
+
+Example: Creating Different Types of Houses
+We will use the Factory Pattern to create different types of houses: Villa, Apartment, and Cottage. The client doesn’t need to know how each house is constructed; it just requests the type, and the factory provides it.
+
+
+2. Product Interface (House):
+This interface defines the common functionality of the different types of houses.
+
+
+public interface IHouse
+{
+    void ShowDetails();
+}
+3. Concrete Product Classes:
+These are the specific types of houses that implement the IHouse interface.
+
+
+Villa Class:
+public class Villa : IHouse
+{
+    public void ShowDetails()
+    {
+        Console.WriteLine("This is a luxurious villa with 5 bedrooms, a pool, and a garden.");
+    }
+}
+
+
+Apartment Class:
+public class Apartment : IHouse
+{
+    public void ShowDetails()
+    {
+        Console.WriteLine("This is a modern apartment with 3 bedrooms and a balcony.");
+    }
+}
+
+
+Cottage Class:
+public class Cottage : IHouse
+{
+    public void ShowDetails()
+    {
+        Console.WriteLine("This is a cozy cottage with 2 bedrooms and a fireplace.");
+    }
+}
+
+
+4. Factory Class:
+The factory class contains a method that creates different house objects based on the input it receives.
+
+csharp
+Copy code
+public class HouseFactory
+{
+    public IHouse CreateHouse(string houseType)
+    {
+        // Return the appropriate house based on the type provided
+        switch (houseType.ToLower())
+        {
+            case "villa":
+                return new Villa();
+            case "apartment":
+                return new Apartment();
+            case "cottage":
+                return new Cottage();
+            default:
+                throw new ArgumentException("Invalid house type");
+        }
+    }
+}
+
+
+5. Client Code:
+This is where the client interacts with the factory to get the appropriate house object.
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        // Create an instance of the HouseFactory
+        HouseFactory houseFactory = new HouseFactory();
+        
+        // Request the factory to create a villa
+        IHouse villa = houseFactory.CreateHouse("villa");
+        villa.ShowDetails();
+        
+        // Request the factory to create an apartment
+        IHouse apartment = houseFactory.CreateHouse("apartment");
+        apartment.ShowDetails();
+        
+        // Request the factory to create a cottage
+        IHouse cottage = houseFactory.CreateHouse("cottage");
+        cottage.ShowDetails();
+    }
+}
+
+
+
+Explanation of Steps:
+Interface (IHouse): Defines the common structure that all house types (Villa, Apartment, Cottage) must implement.
+Concrete Product Classes (Villa, Apartment, Cottage): Each class represents a different house type and implements the IHouse interface.
+Factory Class (HouseFactory): This class contains the logic for deciding which type of house to create based on the input (e.g., "villa", "apartment").
+Client Code: The client uses the HouseFactory to create different types of houses without worrying about the specific implementation.
+
+Example Output:
+css
+Copy code
+This is a luxurious villa with 5 bedrooms, a pool, and a garden.
+This is a modern apartment with 3 bedrooms and a balcony.
+This is a cozy cottage with 2 bedrooms and a fireplace.
+
+
+
+Key Points of Factory Pattern:
+Encapsulation of Object Creation: The factory hides the logic and complexities of creating specific object types.
+Loose Coupling: The client code is decoupled from the specific classes it instantiates. It only interacts with the factory.
+Easy Extensibility: You can easily add new house types by creating new classes and updating the factory without affecting client code.
+Summary of Factory Design Pattern:
+In this example, the Factory Pattern allows us to create different types of houses (Villa, Apartment, Cottage) based on a client request, without exposing the construction details. The client simply requests a house type, and the factory returns the appropriate object, making it easier to manage and extend the code.
+
+
+
+
+
+

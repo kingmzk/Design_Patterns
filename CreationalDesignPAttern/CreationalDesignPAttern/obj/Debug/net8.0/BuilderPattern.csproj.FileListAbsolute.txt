@@ -1,0 +1,14 @@
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\CreationalDesignPAttern\bin\Debug\net8.0\BuilderPattern.deps.json
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\CreationalDesignPAttern\bin\Debug\net8.0\BuilderPattern.dll
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\CreationalDesignPAttern\bin\Debug\net8.0\BuilderPattern.pdb
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\CreationalDesignPAttern\obj\Debug\net8.0\BuilderPattern.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\CreationalDesignPAttern\obj\Debug\net8.0\BuilderPattern.AssemblyInfoInputs.cache
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\CreationalDesignPAttern\obj\Debug\net8.0\BuilderPattern.AssemblyInfo.cs
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\CreationalDesignPAttern\obj\Debug\net8.0\BuilderPattern.csproj.CoreCompileInputs.cache
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\CreationalDesignPAttern\obj\Debug\net8.0\BuilderPattern.dll
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\CreationalDesignPAttern\obj\Debug\net8.0\refint\BuilderPattern.dll
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\CreationalDesignPAttern\obj\Debug\net8.0\BuilderPattern.pdb
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\CreationalDesignPAttern\obj\Debug\net8.0\ref\BuilderPattern.dll
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\CreationalDesignPAttern\bin\Debug\net8.0\BuilderPattern.exe
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\CreationalDesignPAttern\bin\Debug\net8.0\BuilderPattern.runtimeconfig.json
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\CreationalDesignPAttern\obj\Debug\net8.0\BuilderPattern.genruntimeconfig.cache
