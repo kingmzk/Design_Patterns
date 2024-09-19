@@ -1,0 +1,15 @@
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\SingletonDesignPattern\bin\Debug\net8.0\SingletonDesignPattern.exe
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\SingletonDesignPattern\bin\Debug\net8.0\SingletonDesignPattern.deps.json
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\SingletonDesignPattern\bin\Debug\net8.0\SingletonDesignPattern.runtimeconfig.json
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\SingletonDesignPattern\bin\Debug\net8.0\SingletonDesignPattern.dll
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\SingletonDesignPattern\bin\Debug\net8.0\SingletonDesignPattern.pdb
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\SingletonDesignPattern\obj\Debug\net8.0\SingletonDesignPattern.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\SingletonDesignPattern\obj\Debug\net8.0\SingletonDesignPattern.AssemblyInfoInputs.cache
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\SingletonDesignPattern\obj\Debug\net8.0\SingletonDesignPattern.AssemblyInfo.cs
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\SingletonDesignPattern\obj\Debug\net8.0\SingletonDesignPattern.csproj.CoreCompileInputs.cache
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\SingletonDesignPattern\obj\Debug\net8.0\SingletonDesignPattern.sourcelink.json
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\SingletonDesignPattern\obj\Debug\net8.0\SingletonDesignPattern.dll
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\SingletonDesignPattern\obj\Debug\net8.0\refint\SingletonDesignPattern.dll
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\SingletonDesignPattern\obj\Debug\net8.0\SingletonDesignPattern.pdb
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\SingletonDesignPattern\obj\Debug\net8.0\SingletonDesignPattern.genruntimeconfig.cache
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\SingletonDesignPattern\obj\Debug\net8.0\ref\SingletonDesignPattern.dll

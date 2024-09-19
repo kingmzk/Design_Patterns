@@ -1,0 +1,219 @@
+﻿The Prototype Design Pattern is a creational design pattern that allows you to create new objects by copying or "cloning" an existing object (the prototype). Instead of creating new instances by instantiating classes, you create them by cloning a prototype. This pattern is particularly useful when object creation is costly or when you need to avoid subclassing.
+
+Key Points:
+Clone existing objects: Instead of instantiating a new object, you copy an existing one.
+Shallow vs. Deep Copy: You can create either shallow copies (copies references) or deep copies (copies actual values).
+Efficient: Useful in scenarios where object creation is expensive or when subclassing is not desirable.
+Example:
+Let's walk through an example to illustrate the Prototype pattern.
+
+1. Prototype Interface:
+This interface defines the Clone method, which must be implemented by classes that want to allow cloning.
+
+
+public interface IPrototype
+{
+    IPrototype Clone();  // The Clone method that will return a copy of the object
+}
+
+2. Concrete Prototype Class:
+A class implementing the IPrototype interface. It defines how the cloning will be done.
+
+
+public class House : IPrototype
+{
+    public int Walls { get; set; }
+    public int Doors { get; set; }
+    public bool HasGarage { get; set; }
+
+    public House(int walls, int doors, bool hasGarage)
+    {
+        this.Walls = walls;
+        this.Doors = doors;
+        this.HasGarage = hasGarage;
+    }
+
+    // Implementing the Clone method for shallow copy
+    public IPrototype Clone()
+    {
+        // Shallow copy: Only copies values, not objects inside objects
+        return (IPrototype)this.MemberwiseClone();
+    }
+
+    public override string ToString()
+    {
+        return $"House with {Walls} walls, {Doors} doors, and {(HasGarage ? "a" : "no")} garage.";
+    }
+}
+
+
+3. Client Code:
+The client uses the prototype by cloning an existing object.
+
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        // Create a prototype object
+        House originalHouse = new House(10, 5, true);
+        Console.WriteLine("Original: " + originalHouse.ToString());
+
+        // Clone the prototype object
+        House clonedHouse = (House)originalHouse.Clone();
+        Console.WriteLine("Cloned: " + clonedHouse.ToString());
+
+        // Modify the cloned object
+        clonedHouse.Doors = 3;
+        Console.WriteLine("Modified Cloned: " + clonedHouse.ToString());
+
+        // Show the original is still unchanged
+        Console.WriteLine("Original after clone modification: " + originalHouse.ToString());
+    }
+}
+Output:
+
+Original: House with 10 walls, 5 doors, and a garage.
+Cloned: House with 10 walls, 5 doors, and a garage.
+Modified Cloned: House with 10 walls, 3 doors, and a garage.
+Original after clone modification: House with 10 walls, 5 doors, and a garage.
+Explanation:
+Prototype Interface (IPrototype): This interface defines the Clone() method, which allows classes implementing it to create copies of themselves.
+
+Concrete Class (House): Implements the IPrototype interface. The Clone() method uses MemberwiseClone() to create a shallow copy of the object.
+
+Shallow Copy vs. Deep Copy:
+
+Shallow Copy: Copies the object but references to other objects are not copied. If the object contains references to other objects, both the original and the clone will point to the same referenced objects.
+Deep Copy: Creates a completely independent copy of the object, including any referenced objects.
+Client: The client code demonstrates how to create an object, clone it, modify the clone, and observe that the original object remains unchanged.
+
+When to Use the Prototype Pattern:
+
+Costly Object Creation: When creating a new instance of a class is expensive (e.g., computationally expensive operations like reading from a database or file).
+Avoiding Subclassing: When you don’t want to subclass and create multiple versions of the same object, you can use prototypes to create new instances by copying existing ones.
+Object Configuration: When you have objects that are mostly the same but differ in a few properties, cloning the object and modifying the differences can be more efficient than creating new objects from scratch.
+
+Summary of Prototype Design Pattern:
+
+The Prototype Pattern is useful when object creation is expensive or slow. Instead of creating new objects, it clones existing objects, providing flexibility and efficiency in managing object creation. 
+It supports both shallow and deep copying and can be helpful when working with objects that are complex or resource-intensive to create.
+
+
+
+
+
+
+
+To implement deep copy in your House class, you'll need to create a new instance of each object or value type it contains, rather than relying on the MemberwiseClone() method (which is used for shallow copies).
+
+In the current example, since the House class only contains primitive types (int, bool), the distinction between shallow and deep copy is not evident. However, to show deep copy in a meaningful way, let's assume that House contains a reference to another object, such as a Blueprint class. Deep copying would involve creating a new instance of the Blueprint object as well.
+
+Here’s how you can implement deep copy for your House class:
+
+Step 1: Add a Blueprint class (a reference type)
+
+public class Blueprint
+{
+    public string Design { get; set; }
+
+    public Blueprint(string design)
+    {
+        Design = design;
+    }
+
+    // Implement a deep copy for Blueprint
+    public Blueprint DeepCopy()
+    {
+        return new Blueprint(this.Design);
+    }
+
+    public override string ToString()
+    {
+        return $"Blueprint: {Design}";
+    }
+}
+Step 2: Update the House class to include Blueprint and implement deep copy
+
+namespace PrototypeDesignPattern
+{
+    public class House : IPrototype
+    {
+        public int Walls { get; set; }
+        public int Doors { get; set; }
+        public bool HasGarage { get; set; }
+        public Blueprint HouseBlueprint { get; set; }  // Reference type
+
+        public House(int walls, int doors, bool hasGarage, Blueprint blueprint)
+        {
+            this.Walls = walls;
+            this.Doors = doors;
+            this.HasGarage = hasGarage;
+            this.HouseBlueprint = blueprint;
+        }
+
+        // Implementing the Clone method for deep copy
+        public IPrototype Clone()
+        {
+            // Deep copy: Create new instance for reference types as well
+            return new House(this.Walls, this.Doors, this.HasGarage, this.HouseBlueprint.DeepCopy());
+        }
+
+        public override string ToString()
+        {
+            return $"House with {Walls} walls, {Doors} doors, and {(HasGarage ? "a" : "no")} garage.\n{HouseBlueprint}";
+        }
+    }
+}
+Step 3: Client code to demonstrate the deep copy
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        // Original house object
+        Blueprint originalBlueprint = new Blueprint("Modern Design");
+        House originalHouse = new House(10, 5, true, originalBlueprint);
+
+        Console.WriteLine("Original House:");
+        Console.WriteLine(originalHouse.ToString());
+
+        // Clone the house object (deep copy)
+        House clonedHouse = (House)originalHouse.Clone();
+
+        Console.WriteLine("\nCloned House:");
+        Console.WriteLine(clonedHouse.ToString());
+
+        // Modify the blueprint in the cloned house
+        clonedHouse.HouseBlueprint.Design = "Colonial Design";
+
+        Console.WriteLine("\nModified Cloned House Blueprint:");
+        Console.WriteLine(clonedHouse.ToString());
+
+        // Check that the original house blueprint remains unchanged
+        Console.WriteLine("\nOriginal House after modification in the cloned house:");
+        Console.WriteLine(originalHouse.ToString());
+    }
+}
+Output:
+
+Original House:
+House with 10 walls, 5 doors, and a garage.
+Blueprint: Modern Design
+
+Cloned House:
+House with 10 walls, 5 doors, and a garage.
+Blueprint: Modern Design
+
+Modified Cloned House Blueprint:
+House with 10 walls, 5 doors, and a garage.
+Blueprint: Colonial Design
+
+Original House after modification in the cloned house:
+House with 10 walls, 5 doors, and a garage.
+Blueprint: Modern Design
+Explanation:
+The Blueprint class represents a reference type object inside the House class.
+In the Clone() method, a deep copy is performed by explicitly calling the DeepCopy() method on the Blueprint object.
+After cloning, modifying the Blueprint of the cloned house does not affect the original house, which is the essence of deep copy.
+By ensuring that reference-type properties like Blueprint are also cloned, this example achieves a true deep copy of the House object.

@@ -1,0 +1,15 @@
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\AbstractFactoryDesignPattern\bin\Debug\net8.0\AbstractFactoryDesignPattern.exe
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\AbstractFactoryDesignPattern\bin\Debug\net8.0\AbstractFactoryDesignPattern.deps.json
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\AbstractFactoryDesignPattern\bin\Debug\net8.0\AbstractFactoryDesignPattern.runtimeconfig.json
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\AbstractFactoryDesignPattern\bin\Debug\net8.0\AbstractFactoryDesignPattern.dll
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\AbstractFactoryDesignPattern\bin\Debug\net8.0\AbstractFactoryDesignPattern.pdb
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\AbstractFactoryDesignPattern\obj\Debug\net8.0\AbstractFactoryDesignPattern.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\AbstractFactoryDesignPattern\obj\Debug\net8.0\AbstractFactoryDesignPattern.AssemblyInfoInputs.cache
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\AbstractFactoryDesignPattern\obj\Debug\net8.0\AbstractFactoryDesignPattern.AssemblyInfo.cs
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\AbstractFactoryDesignPattern\obj\Debug\net8.0\AbstractFactoryDesignPattern.csproj.CoreCompileInputs.cache
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\AbstractFactoryDesignPattern\obj\Debug\net8.0\AbstractFactoryDesignPattern.sourcelink.json
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\AbstractFactoryDesignPattern\obj\Debug\net8.0\AbstractFactoryDesignPattern.dll
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\AbstractFactoryDesignPattern\obj\Debug\net8.0\refint\AbstractFactoryDesignPattern.dll
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\AbstractFactoryDesignPattern\obj\Debug\net8.0\AbstractFactoryDesignPattern.pdb
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\AbstractFactoryDesignPattern\obj\Debug\net8.0\AbstractFactoryDesignPattern.genruntimeconfig.cache
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\AbstractFactoryDesignPattern\obj\Debug\net8.0\ref\AbstractFactoryDesignPattern.dll

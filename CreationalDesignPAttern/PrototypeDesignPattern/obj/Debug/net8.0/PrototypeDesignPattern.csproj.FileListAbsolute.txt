@@ -1,0 +1,15 @@
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\PrototypeDesignPattern\bin\Debug\net8.0\PrototypeDesignPattern.exe
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\PrototypeDesignPattern\bin\Debug\net8.0\PrototypeDesignPattern.deps.json
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\PrototypeDesignPattern\bin\Debug\net8.0\PrototypeDesignPattern.runtimeconfig.json
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\PrototypeDesignPattern\bin\Debug\net8.0\PrototypeDesignPattern.dll
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\PrototypeDesignPattern\bin\Debug\net8.0\PrototypeDesignPattern.pdb
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\PrototypeDesignPattern\obj\Debug\net8.0\PrototypeDesignPattern.GeneratedMSBuildEditorConfig.editorconfig
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\PrototypeDesignPattern\obj\Debug\net8.0\PrototypeDesignPattern.AssemblyInfoInputs.cache
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\PrototypeDesignPattern\obj\Debug\net8.0\PrototypeDesignPattern.AssemblyInfo.cs
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\PrototypeDesignPattern\obj\Debug\net8.0\PrototypeDesignPattern.csproj.CoreCompileInputs.cache
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\PrototypeDesignPattern\obj\Debug\net8.0\PrototypeDesignPattern.sourcelink.json
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\PrototypeDesignPattern\obj\Debug\net8.0\PrototypeDesignPattern.dll
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\PrototypeDesignPattern\obj\Debug\net8.0\refint\PrototypeDesignPattern.dll
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\PrototypeDesignPattern\obj\Debug\net8.0\PrototypeDesignPattern.pdb
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\PrototypeDesignPattern\obj\Debug\net8.0\PrototypeDesignPattern.genruntimeconfig.cache
+E:\C# VIsual Studio\DesignPatterns\CreationalDesignPAttern\PrototypeDesignPattern\obj\Debug\net8.0\ref\PrototypeDesignPattern.dll
